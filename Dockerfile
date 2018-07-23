@@ -14,6 +14,7 @@ RUN apk --no-cache add coreutils \
   && wget -O - https://github.com/dalibo/pgbadger/archive/v${PGBADGER_VERSION}.tar.gz | tar -zxvf - -C /opt
 
 COPY docker-entrypoint.sh /entrypoint.sh
+COPY docker-entrypoint-no-args.sh /entrypoint-no-args.sh
 
 VOLUME $PGBADGER_DATA
 
